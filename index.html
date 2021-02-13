@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../p5/p5.min.js"></script>
+    <script src="../p5/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+    @font-face {
+      font-family: "Berlin";
+      src: url("assets/berlin.regular.ttf");
+      }
+
+      body{
+        margin: 0;
+        background-color: rgb(185, 219, 240);
+        font-size: 20px;
+        font-family: "Berlin";
+      }
+      canvas{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .text{
+        padding: 5vw;
+        max-width: 25%;
+        line-height: 150%;
+      }
+      button{
+        background-color: rgb(185, 219, 240);
+        font-size: 20px;
+        font-family: "Berlin";
+        border: 1px solid black;
+        padding: .5vw;
+        margin: .5vw;
+      }
+      button:hover{
+        background-color: rgba(112, 149, 177, .6);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <p>Biking in a big city is always an adventure &mdash; there are slow bikers, aggressive drivers and bike lanes that do not make any sense.</p>
+      <p>In this game, you need to navigate the craze of Berlin traffic: </p>
+      <ul>
+        <li>If you crash into a car, the game is over</li>
+        <li>If you crash into a fellow bike rider, you lose your game points!</li>
+        <li>Collect some of the famous Berlin treats on the way to sustain yourself enough to climb all these city hills</li>
+      </ul>
+
+      <div class="buttondiv">
+        Disable Game Sound Effects:
+        <button id="button1" onclick="soundButtonHandler();">Stop Sound</button>
+      </div>
+
+      <div class="buttondiv">
+        Start Food Frenzy Mode:
+        <button id="button2" onclick="foodRainHandler();">Click Me!</button>
+      </div>
+
+    </div>
+  </body>
+</html>
